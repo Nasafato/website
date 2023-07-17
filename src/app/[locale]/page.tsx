@@ -1,10 +1,9 @@
-import Image from "next/image";
+import { Posts } from "@/app/[locale]/Posts";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <section className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm">
-        <h1 className="font-bold">Alan Gou</h1>
+    <main className="space-y-5">
+      <section>
         <div className="mt-2">Currently on sabbatical.</div>
         <ul className="mt-2 list-inside list-disc">
           <li>
@@ -16,6 +15,9 @@ export default function Home() {
             </a>
           </li>
         </ul>
+      </section>
+      <section>
+        <Posts />
       </section>
     </main>
   );
