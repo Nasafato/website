@@ -1,1 +1,9 @@
-{}
+{
+  "ThemeToggle": {
+    "choices": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    }
+  }
+}

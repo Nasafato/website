@@ -8,6 +8,7 @@ module.exports = {
     plugin(function ({ addVariant }) {
       addVariant("theme-system", ".theme-system &");
     }),
+    require("@tailwindcss/typography"),
   ],
   future: {
     hoverOnlyWhenSupported: true,

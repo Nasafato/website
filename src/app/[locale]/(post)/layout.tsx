@@ -3,5 +3,5 @@ export default async function PostLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <article className="prose dark:prose-invert">{children}</article>;
 }

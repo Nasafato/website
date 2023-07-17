@@ -42,7 +42,7 @@ export function useLocale() {
   return useContext(IntlContext).locale;
 }
 
-export function useTranslations(key: string) {
+export function useTranslations(key?: string) {
   const { messages } = useContext(IntlContext);
 
   return (key: string) => {

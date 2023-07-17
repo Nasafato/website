@@ -1,4 +1,4 @@
-import { themeEffect } from "@/app/ThemeToggle";
+import { themeEffect } from "@/app/ThemeEffect";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -24,7 +24,9 @@ export default function RootLayout({
           }}
         ></script>
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} dark:bg-gray-950 dark:text-gray-50`}>
+        {children}
+      </body>
     </html>
   );
 }
