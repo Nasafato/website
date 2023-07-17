@@ -5,6 +5,9 @@ export default async function Home() {
     <main className="space-y-5">
       <section>
         <div className="mt-2">Currently on sabbatical.</div>
+      </section>
+      <section>
+        <h2>Recently</h2>
         <ul className="mt-2 list-inside list-disc">
           <li>
             <a
@@ -12,6 +15,16 @@ export default async function Home() {
               className="underline"
             >
               Daodejing.app
+            </a>
+          </li>
+          <li>
+            <a href="https://www.strike.trade" className="underline">
+              strike.trade
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/revv_xyz" className="underline">
+              Revv
             </a>
           </li>
         </ul>

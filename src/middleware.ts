@@ -42,10 +42,8 @@ export function middleware(request: NextRequest) {
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   );
 
-  // Redirect if there is no locale
+  // Redirect if there is no locale.
   if (pathnameIsMissingLocale) {
-    // e.g. incoming request is /products
-    // The new URL is now /en-US/products
     return NextResponse.redirect(
       new URL(`/${locale}/${pathname}`, request.url)
     );
@@ -53,12 +51,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: [
-    // Skip all internal paths (_next)
-    // "/((?!api|_next|.*..*).*)/",
-    // "/((?!api|_next|.*\\..*).*|manifest.json)",
-    "/((?!_next|.*.json|api|opengraph-image|.*\\..*).*)",
-    // Optional: only run on root (/) URL
-    // '/'
-  ],
+  matcher: ["/((?!_next|.*.json|api|opengraph-image|.*\\..*).*)"],
 };

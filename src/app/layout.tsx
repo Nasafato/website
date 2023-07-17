@@ -1,3 +1,4 @@
+import { themeEffect } from "@/app/ThemeToggle";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -16,6 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(${themeEffect.toString()})()`,
+          }}
+        ></script>
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
