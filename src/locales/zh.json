@@ -1,1 +1,9 @@
-{}
+{
+  "ThemeToggle": {
+    "choices": {
+      "dark": "深色",
+      "light": "浅色",
+      "system": "系统"
+    }
+  }
+}

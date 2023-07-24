@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.system-icon {
+  display: none;
+}
+
+.moon-icon {
+  display: none;
+}
+
+.sun-icon {
+  display: inline;
+}
+
+.dark .sun-icon {
+  display: none;
+}
+
+.dark .moon-icon {
+  display: inline;
+}
+
+.theme-system .system-icon {
+  display: inline;
+}
+
+.theme-system .sun-icon,
+.theme-system .moon-icon {
+  display: none;
+}
+
+/* [&_.moon-icon]:hidden
+          [&_.system-icon]:hidden
+          
+          dark:[&_.system-icon]:hidden
+          dark:[&_.moon-icon]:inline
+          dark:[&_.sun-icon]:hidden
+
+          theme-system:[&_.system-icon]:inline
+          theme-system:dark:[&_.system-icon]:inline
+          theme-system:dark:[&_.moon-icon]:hidden
+          theme-system:[&_.sun-icon]:hidden
+          theme-system:[&._moon-icon]:hidden */

@@ -47,10 +47,6 @@ export function ThemeToggle() {
 
   return (
     <div className="group flex items-center gap-x-1 font-mono">
-      {/*
-        the `theme-auto:` plugin is registered in `tailwind.config.js` and
-        works similarly to the `dark:` prefix, which depends on the `theme-effect.ts` behavior
-      */}
       <span
         className={`
             text-[9px]
@@ -72,19 +68,7 @@ export function ThemeToggle() {
         aria-label="Toggle theme"
         className={`inline-flex
           transition-[background-color] dark:active:bg-[#242424] rounded-sm p-2 
-        group-hover:bg-gray-200 dark:group-hover:bg-[#313131]
-          [&_.moon-icon]:hidden
-          [&_.system-icon]:hidden
-          
-          dark:[&_.system-icon]:hidden
-          dark:[&_.moon-icon]:inline
-          dark:[&_.sun-icon]:hidden
-
-          theme-system:[&_.system-icon]:inline
-          theme-system:dark:[&_.system-icon]:inline
-          theme-system:dark:[&_.moon-icon]:hidden
-          theme-system:[&_.sun-icon]:hidden
-          theme-system:[&._moon-icon]:hidden
+          group-hover:bg-gray-200 dark:group-hover:bg-[#313131]
         `}
         onClick={(ev) => {
           ev.preventDefault();
