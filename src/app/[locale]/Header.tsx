@@ -5,7 +5,6 @@ export function Header() {
   return (
     <header className="flex mb-8 justify-between items-center">
       <Logo />
-      <nav></nav>
       <ThemeToggle />
     </header>
   );
