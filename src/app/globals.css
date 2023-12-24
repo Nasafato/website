@@ -32,6 +32,8 @@
 }
 
 /* [&_.moon-icon]:hidden
+          [&_[aria-hidden="true"]]:hidden
+
           [&_.system-icon]:hidden
           
           dark:[&_.system-icon]:hidden

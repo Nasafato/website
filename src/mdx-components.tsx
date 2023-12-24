@@ -12,7 +12,13 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     // h1: ({ children }) => <h1 style={{ fontSize: "100px" }}>{children}</h1>,
     ...components,
     h1: ({ children }) => (
-      <h1 className="text-xl font-bold mb-4">{children}</h1>
+      <h1 className="text-3xl font-bold mb-4">{children}</h1>
+    ),
+    h2: ({ children }) => (
+      <h2 className="text-xl font-semibold mb-4">{children}</h2>
+    ),
+    h3: ({ children }) => (
+      <h2 className="text-lg font-semibold mb-2">{children}</h2>
     ),
     p: ({ children }) => <p className="mb-2">{children}</p>,
     a: ({ children, href }) => (

@@ -1,4 +1,5 @@
 import { Posts } from "@/app/[locale]/Posts";
+import { Physics } from "@/app/[locale]/physics/Physics";
 
 export default async function Home() {
   return (
@@ -31,6 +32,9 @@ export default async function Home() {
       </section>
       <section>
         <Posts />
+      </section>
+      <section>
+        <Physics />
       </section>
     </main>
   );
