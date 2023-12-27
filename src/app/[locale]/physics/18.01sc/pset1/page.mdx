@@ -14,7 +14,7 @@ $$
 v_c = 
 \begin{cases} 
 v_0 & 0 < t < t_1 \\
-v_0-c(\frac{1}{2}t^2 - t_1 t + \frac{1}{2}t_1^2) & t_1 < t < t_2 
+v_0-\frac{1}{2}c(t - t_1)^2 & t_1 < t < t_2 
 \end{cases}
 $$
 
@@ -24,8 +24,7 @@ $$
 x_c = 
 \begin{cases} 
 v_0 t & 0 < t < t_1 \\
-v_0 t -c(\frac{1}{6}t^3 - \frac{1}{2}t_1 t^2 + \frac{1}{2}t_1^2 t +\frac{1}{6}t_1^3)
- & t_1 < t < t_2 
+v_0 t - \frac{1}{6}c(t - t_1)^3 & t_1 < t < t_2 
 \end{cases}
 $$
 
@@ -47,23 +46,203 @@ Now, for $t_2$:
 
 $$
 \begin{aligned}
-v_c(t_2) = 0 &= v_0-c(\frac{1}{2}t_2^2 - t_1 t_2 + \frac{1}{2}t_1^2)  \\
- &= -\frac{c}{2}t_2^2 + ct_1 t_2 - \frac{c}{2}t_1^2 + v_0 \\
- &= -3t_2^2 + 6t_2+9 \\
- &= (t_2-3)(-3t_2-3)
+v_c(t_2) &= v_0-\frac{1}{2}c(t_2-t_1)^2  = 0 \\
+ &= (t_2-t_1)^2 = \frac{2v_0}{c}  \\
+
+t_2 &= \sqrt{\frac{2v_0}{c}} + t_1
+
 \end{aligned}
 $$
 
 So, we have $t_2=3$, ignoring the negative solution.
 
-Now, plug this in to $x_c(t)$ (the car's position) to get the final position at which the bicycle and the car meet:
+Now, plug this in to $x_c(t)$ (the car's position) to get the final position at which the bicycle and the car meet, which is $28$.
 
 $$
 \begin{aligned}
-x_c(t_2=3) &=26 = x_b(t_2=3) \\
-26 &= -17 + 3v_b \\
-v_b &= 13.67 m/s
+x_b(t_2=3) &= 28\\
+-17 + 3v_b &= 28 \\
+v_b &= 15
 
 \end{aligned}
 $$
 
+## Problem 2: Elevator Trip
+
+Acceleration is the rate at which velocity increases, so the slopes of the trapezoid's left and right sides are $a$ and $-a$, respectively.
+The height is $aT$, since after $T$ seconds, the elevator has reached its maximum velocity of $aT$.
+
+<img src="/mit18.01sc-pset1-p2.png" className="mt-4"/>
+
+The area of the trapezoid is the distance traveled, which can be computed as the sum of the areas of the two triangles and the rectangle.
+
+This is equal to $\frac{1}{2}aT^2+\frac{1}{2}aT^2+4aT^2=5aT^2$.
+
+In this time, the elevator travels a distance $h$, so we get:
+
+$$
+\begin{aligned}
+5aT^2 &= h \\
+a &= \frac{h}{5T^2}
+\end{aligned}
+$$
+
+## Problem 3: Rocket Launch
+
+We can find the time at which the rocket reaches its maximum height by setting the velocity to zero and solving for $t$. To do this, we must derive the velocity equation.
+
+To find $h$, we derive the position equations for the stone and the rocket and set them equal to each other, then solve for $h$.
+
+### Rocket equations
+
+We will ignore gravity for the rocket and use the acceleration equation as it is given to us.
+
+$$
+\begin{aligned}
+a_y(t)&=A-Bt \\
+v_y(t)&=At-\frac{1}{2}Bt^2 \\
+h_y(t)&=\frac{1}{2}At^2-\frac{1}{6}Bt^3
+\end{aligned}
+$$
+
+Find $t_f$ such that $v_y(t_f)=0$:
+$$
+\begin{aligned}
+At_f-\frac{1}{2}Bt_f^2 &= 0 \\
+t_f(A-\frac{1}{2}Bt_f) &= 0 \\
+t_f &= 0, \frac{2A}{B}
+\end{aligned}
+$$
+
+### Ball equations
+
+The acceleration equation for the ball is $a_y(t)=-g$, so we can integrate this to get the velocity and position equations.
+$$
+\begin{aligned}
+a_b(t)&=-g \\
+v_b(t)&=-gt \\
+h_b(t)&=h-\frac{1}{2}gt^2
+\end{aligned}
+$$
+
+### Finding $h$
+
+We set the heights of the rocket and ball equal to each other at $t_f$ and solve for $h$:
+
+$$
+\begin{aligned}
+h_b(t_f) &= h_y(t_f) \\
+h-\frac{1}{2}gt_f^2 &= \frac{1}{2}At_f^2-\frac{1}{6}Bt_f^3  \\
+h &= \frac{1}{2}At_f^2-\frac{1}{6}Bt_f^3 + \frac{1}{2}gt_f^2  \\
+\end{aligned}
+$$
+
+Using the value of $t_f=\frac{2A}{B}$ we found earlier, we get:
+$$
+\begin{aligned}
+h &= \frac{2A^3}{B^2} + \frac{4A^3}{3B^2} + \frac{2A^2g}{B^2} \\
+&= \frac{2A^3}{3B^2} + \frac{2A^2g}{B^2}
+\end{aligned}
+$$
+
+## Problem 4: Throw and Catch
+
+As before, we derive the kinematic equations for the ball and the person.
+
+We are given the constraint that the ball is caught at the same height it was thrown from, which we set as $y=0$. Setting the ball's final position to $0$ and solving for $t_f$ gives us the time at which the ball is caught, which we can then use to find $B$ by using $t_f$ in the person's position equation.
+
+### Ball equations
+$$
+\begin{aligned}
+a_{b,y}(t) &= -g \\
+a_{b,x}(t) &= 0 \\
+v_{b,y}(t) &= v_0\sin{\theta} -gt \\
+v_{b,x}(t) &= v_0\cos{\theta} \\
+p_{b,y}(t) &= v_0\sin{\theta}t - \frac{1}{2}gt^2 \\
+p_{b,x}(t) &= -d + v_0\cos{\theta}t
+\end{aligned}
+$$
+
+### Person equations
+$$
+\begin{aligned}
+a_{p,x}(t) &= Bt \\
+v_{p,x}(t) &= \frac{1}{2}Bt^2 \\
+p_{p,x}(t) &= \frac{1}{6}Bt^3
+\end{aligned}
+$$
+
+### Solving for $t_f$
+Setting $p_{b,y}(t_f)=0$:
+
+$$
+\begin{aligned}
+v_0\sin{\theta}t_f - \frac{1}{2}gt_f^2 &= 0 \\
+t_f(v_0\sin{\theta} - \frac{1}{2}gt_f) &= 0 \\
+t_f &= 0, \frac{2v_0\sin{\theta}}{g}
+
+\end{aligned}
+$$
+
+### Solving for $B$
+We set the x-positions of the ball and the person equal to each other at $t_f$ and solve for $B$:
+
+$$
+\begin{aligned}
+p_{b,x}(t_f) &= p_{p,x}(t_f) \\
+-d + v_0\cos{\theta}t_f &= \frac{1}{6}Bt_f^3 \\
+B &=  6(\frac{v_0\cos{\theta}}{t_f^2} - \frac{d}{t_f^3}) \\
+B &= \frac{3g^2\cos{\theta}}{2v_0\sin^2{\theta}} - \frac{3dg^3}{4v_0^3\sin^3{\theta}}
+
+\end{aligned}
+$$
+
+
+## Problem 5: Vertical Collision
+We can derive the kinematic equations for both cans, which are identical. The collision occurs at $t_f$ seconds, when the height of the first is equal to the height of the second.
+
+$$
+\begin{aligned}
+a(t) &= -g \\
+v(t) &= v_0 - gt \\
+h(t) &= v_0t - \frac{1}{2}gt^2
+\end{aligned}
+$$
+
+### (a) Finding $t_f$
+The height of the second can is $h(t_f-t_1)$, which is equal to the height of the first $h(t_f).
+$$
+\begin{aligned}
+h(t_f) &= h(t_f-t_1) \\
+v_0t_f - \frac{1}{2}gt_f^2 &= v_0(t_f-t_1) - \frac{1}{2}g(t_f-t_1)^2 \\
+v_0 &= gt_f-\frac{1}{2}gt_1
+\end{aligned}
+$$
+
+Now, we know $h(t_f) = h$, so plugging in $v_0$ and solving for $t_f$ gives us the time at which the cans collide:
+
+$$
+\begin{aligned}
+h(t_f) &= h \\
+v_0t_f - \frac{1}{2}gt_f^2 &= h \\
+(gt_f-\frac{1}{2}gt_1)t_f - \frac{1}{2}gt_f^2 &= h \\
+\frac{1}{2}gt_f^2 - \frac{1}{2}gt_1t_f - h &= 0 \\
+gt_f^2 - gt_1t_f - 2h &= 0 \\
+t_f &= \frac{gt_1 \pm \sqrt{g^2t_1^2 + 8gh}}{2g} \\
+t_f &= \frac{9.81(4.0) \pm \sqrt{(9.81^24.0^2+8(9.81)(5.0))}}{2(9.81)} \\
+\end{aligned}
+$$
+
+.
+
+This gives us $t_f=4.2404$ seconds ([link to calculation](https://www.wolframalpha.com/input?i=%28gt_1%2Bsqrt%28g%5E2t_1%5E2%2B8gh%29%29%2F%282g%29+where+g%3D9.81%2Ct_1%3D4.0%2Ch%3D5.0)).
+
+### (b) Finding $v_0$
+We plug $t_f$ back into the equation for $v_0$ to get the initial velocity of the cans:
+$$
+\begin{aligned}
+v_0&=gt_f-\frac{1}{2}gt_1 \\
+\end{aligned}
+$$
+
+Which gives us $v_0=21.9783$ m/s ([link to calculation](https://www.wolframalpha.com/input?i=v_0%3Dg*%28t%29+-+1%2F2*g*%28t_1%29%2C+where+g%3D9.81%2C+t%3D4.2404%2C+t_1%3D4.0)).

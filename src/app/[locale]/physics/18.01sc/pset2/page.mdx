@@ -1,0 +1,248 @@
+# PSET 2: Newton's Laws 
+
+[Link to PSET](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-2-newtons-laws/problem-set-2/)
+
+## 1. Stacked Blocks
+
+Choose a coordinate system, which requires us to define the unit vectors. For this problem, $\hat{i}$ is the positive $x$ direction, $\hat{j}$ is the positive $y$ direction, and $\hat{k}$ is the positive $z$ direction.
+
+Now, draw the free-body diagram for each block.
+<img src="/mit18.01sc-pset2-p1-force-diagram.png" className="mt-4"/>
+
+Then, apply Newton's laws to find the dynamics of each block in each direction.
+
+### Block 1
+$$
+\begin{alignedat}{2}
+\sum{F_{1,x}} &= m_1 a_{1,x} &&= F-f_s \\
+\sum{F_{1,y}} &= 0 &&= N_1 - m_1g
+\end{alignedat}
+$$
+
+### Block 2
+$$
+\begin{alignedat}{2}
+\sum{F_{2,x}} &= m_2 a_{2,x} &&= f_{2,s} \\
+\sum{F_{2,y}} &= 0 &&= N_2 - N_1 - m_2g
+\end{alignedat}
+$$
+
+Our constraint comes from the two blocks having the same acceleration.
+To find $F_{\text{max}}$, we find $F$ and set $a_{1,x} = a_{2,x} = a$.
+
+By Newton's third law, the friction force on block 1 is equal and opposite to the friction force on block 2, so we can equate the magnitudes: $f_{1,s}=f_{2,s}=f_s$.
+
+$$
+\begin{alignedat}{2}
+m_1a &= F - \mu_s N_1 \\
+N_1 &= m_1g \\
+m_2a &= \mu_s N_1 \\
+N_2 &= N_1 + m_2g \\
+&= (m_1+m_2)g
+\end{alignedat}
+$$
+
+Simplifying some more, we get:
+
+$$
+\begin{aligned}
+a &= \frac{m_1}{m_2}\mu_sg \\
+F_{\text{max}} &= m_1a+\mu_sm_1g \\
+ &= m_1\left(\frac{m_1}{m_2}\mu_sg+\mu_sg\right) \\
+    &= m_1\mu_sg\left(\frac{m_1}{m_2}+1\right) \\
+\end{aligned}
+$$
+
+## 2. Accelerating Truck and Suspended Bucket
+
+
+<img src="/mit18.01sc-pset2-p2-a-forcediagram.png" className="mt-4"/>
+
+### (a) Find $\theta$
+$$
+\begin{alignedat}{2}
+\sum{F_{1,x}} &= Ma &&= T\cos{\theta} \\
+\sum{F_{1,y}} &= 0 &&= T\sin{\theta} - Mg
+\end{alignedat}
+$$
+
+We can get rid of the tension by dividing the two equations:
+
+$$
+\begin{alignedat}{2}
+T\sin{\theta} &= Mg \\
+T\cos{\theta} &= Ma \\
+\end{alignedat}
+$$
+
+Becomes
+
+$$
+\begin{aligned}
+\tan{\theta} &= \frac{a}{g} \\
+\theta &= \tan^{-1}{\frac{a}{g}}
+\end{aligned}
+$$
+
+### (b) Find $T$
+Any equation with $T$ will do.
+
+$$
+T = \frac{Ma}{\cos{(\tan^{-1}{\frac{a}{g}})}}
+$$
+
+<img src="/mit18.01sc-pset2-p2-c-forcediagram.png" className="mt-4"/>
+
+### (c) Find $\theta$ when truck is on a decline
+Aligning our coordinate system along the ramp makes the calculations easier.
+
+$$
+\begin{alignedat}{2}
+\sum{F_{1,x}} &= Ma &&= T\cos{\theta} + Mg\sin{\alpha} \\
+\sum{F_{1,y}} &= 0 &&= T\sin{\theta} - Mg\cos{\alpha}
+\end{alignedat}
+$$
+
+Then we can divide the two equations to get an equation for $\tan{\theta}$ and then $\theta$:
+
+$$
+\begin{aligned}
+T\sin{\theta} &= Mg\cos{\alpha} \\
+T\cos{\theta} &= Ma - Mg\sin{\alpha} \\
+\tan{\theta} &= \frac{g\cos{\alpha}}{a-g\sin{\alpha}} \\
+\theta &= \tan^{-1}{\frac{g\cos{\alpha}}{a-g\sin{\alpha}}}
+\end{aligned}
+$$
+
+### (d) Find $T$ when truck is on a decline
+
+We can plug in this value for $\theta$ into any equation with $T$.
+
+$$
+\begin{aligned}
+T\sin{\theta} &= Mg\cos{\alpha} \\
+T &= \frac{Mg\cos{\alpha}}{\sin{(\tan^{-1}{\frac{g\cos{\alpha}}{a-g\sin{\alpha}}})}}
+
+\end{aligned}
+$$
+
+# 3. A wedge against a wall
+
+## (a) Forces on the block
+
+<img src="/mit18.01sc-pset2-p3-a-forcediagram.png" className="mt-4"/>
+If we align our coordinate system with the wedge, then the forces in the $y$ direction cancel, leaving only the force downwards along the wedge, which has magnitude $mg\sin{\theta}$.
+
+So, $F_{\text{total}}=mg\sin{\theta}$.
+
+## (b) Force by the wall on the wedge
+
+<img src="/mit18.01sc-pset2-p3-b-forcediagram.png" className="mt-4"/>
+
+From part (a) and by Newton's third law, we know:
+$$
+N_{\text{block}} = mg\cos{\theta}
+$$
+
+Since the wedge is not moving in the $x$ direction, we have:
+$$
+\begin{alignedat}{2}
+\sum{F_{\text{wedge},x}} &= 0 &&= N_{\text{wall}} - N_{\text{block}}\sin{\theta} \\
+\end{alignedat}
+$$
+
+So, we get:
+$$
+\begin{aligned}
+F_{\text{ww}} &= N_{\text{wall}} \\
+ &= N_{\text{block}}\sin{\theta} \\
+    &= mg\cos{\theta}\sin{\theta} \\
+\end{aligned}
+$$
+
+# 4. Dragging two blocks
+The key is making sure we draw all the forces correctly.
+
+After that, it's just a matter of summing up the forces in each direction correctly.
+
+Since the speed is constant, the acceleration of each block is zero, so the net force on each block is zero.
+
+<img src="/mit18.01sc-pset2-p4-forcediagram.png" className="mt-4"/>
+
+$$
+\begin{alignedat}{2}
+\sum{F_{2,x}} &= 0 &&= f_{2} + T - F \\
+\sum{F_{2,y}} &= 0 &&= N_2 - m_2g \\
+\sum{F_{1,x}} &= 0 &&= T - f_{1} - f_{21} \\
+\sum{F_{1,y}} &= 0 &&= N_1 - m_1g - N_2 \\
+\end{alignedat}
+$$
+
+Let's get the friction forces:
+$$
+\begin{aligned}
+N_2 &= m_2g \\
+N_1 &= m_1g + N_2 \\
+    &= m_1g + m_2g \\
+    &= (m_1+m_2)g \\
+f_1 &= \mu N_1 \\
+    &= \mu (m_1+m_2)g \\
+f_2 &= \mu N_2 \\
+    &= \mu m_2g \\
+f_{21} &= f_2 \\
+    &= \mu m_2g \\
+\end{aligned}
+$$
+
+Then, we substitue the tension and friction forces into the equations to get $F$:
+$$
+\begin{aligned}
+T &= f_1 + f_{21} \\
+&= \mu (m_1+m_2)g + \mu m_2g \\
+&= \mu g (m_1+2m_2) \\
+
+F &= f_2 + T \\
+&= \mu m_2g + \mu g (m_1+2m_2) \\
+&= \mu g (m_1+3m_2) \\
+
+
+\end{aligned}
+$$
+
+
+# 5. Blocks and springs
+
+## (a) Find spring stretch
+<img src="/mit18.01sc-pset2-p5-a-forcediagram.png" className="mt-4"/>
+
+The force diagram reveals the answer.
+
+$$
+\begin{alignedat}{2}
+\sum{F_{a,y}} &= 0 &&= kd - mg \\
+kd &= mg \\
+\sum{F_{b,y}} &= 0 &&= kx - \frac{mg}{2} \\
+kx &= \frac{mg}{2} \\
+kx &= \frac{kd}{2} \\
+x &= \frac{d}{2} \\
+\end{alignedat}
+$$
+
+The spring stretches half as much in Figure B as it does in Figure A.
+
+## (b) Find equilibrium height of spring-block system
+<img src="/mit18.01sc-pset2-p5-b-forcediagram.png" className="mt-4"/>
+Not as complicated as it might look.
+When the pillar is removed, the mass will drop down by a distance $d$, and the bottom springs will push upwards while the top springs will pull upwards.
+
+The new equilibrium is a position where the sum of forces in the $y$ direction is zero.
+
+$$
+\begin{alignedat}{2}
+\sum{F_{y}} =& \text{ }0 &&= 2k_2d +2k_1d - Mg \\
+& \text{ }d &&= \frac{Mg}{2(k_1+k_2)} \\
+& \text{ }h_f &&= h - d \\
+& \text{ }&&= h - \frac{Mg}{2(k_1+k_2)} \\
+
+\end{alignedat}
+$$

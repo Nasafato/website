@@ -21,6 +21,7 @@
     "autoprefixer": "10.4.16",
     "eslint": "8.56.0",
     "eslint-config-next": "14.0.4",
+    "jsxgraph": "^1.6.2",
     "negotiator": "^0.6.3",
     "next": "14.0.4",
     "postcss": "8.4.32",
