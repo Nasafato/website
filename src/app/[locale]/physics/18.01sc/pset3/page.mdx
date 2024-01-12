@@ -1,0 +1,248 @@
+# PSET 3: Circular Motion
+
+[Link to PSET](https://ocw.mit.edu/courses/8-01sc-classical-mechanics-fall-2016/pages/week-3-circular-motion/problem-set-3/)
+
+## 1. Bead on a Rotating Hoop
+
+### (a) Finding equilibrium $\omega$
+<img src="/mit18.01sc-pset3-p1-a-forcediagram.png" className="mt-4"/>
+
+There is a certain angular velocity at which the normal force from the ring on the bead netted with the gravitational pull on the bead equals zero.
+
+Note the rotation is around the axis, so the radial distance is $R\sin{\theta}$, not $R$.
+
+$$
+\begin{alignedat}{2}
+\sum{F_{r}} = & -mR\sin{\theta}\omega^2 && = -N\sin{\theta} \\
+            & N\sin{\theta} && =   \\
+\sum{F_{y}} = & \text{ } 0 && = N\cos{\theta} - mg \\
+            & \text{ } N && = \frac{mg}{\cos{\theta}} \\
+
+\end{alignedat}
+$$
+
+With this, we can find $\omega$:
+
+$$
+\begin{aligned}
+\omega^2 &= \frac{N}{R} \\
+         &= \frac{g}{R\cos{\theta}} \\
+\omega   &= \sqrt{\frac{g}{R\cos{\theta}}}
+\end{aligned}
+$$
+
+### (b) Finding $\omega_0$
+If $\theta=0$, $\cos{\theta}=1$, and we have:
+$$
+\omega_0=\sqrt{\frac{g}{R}}
+$$
+
+## 2. Banked Turn
+The direction of the friction force will differ when calculating $v_{\text{min}}$ vs. $v_{\text{max}}$. At $v_{\text{min}}$, the car is about to slip downwards towards in the center of the circle, so the friction force is pointed in the positive $\hat{r}$ direction.
+
+At $v_{\text{max}}$, the car is about to slip upwards towards the outside of the circle, so the friction force is pointed in the negative $\hat{r}$ direction.
+
+<img src="/mit18.01sc-pset3-p2-forcediagram.png" className="mt-4"/>
+
+Remember that $r\omega = v$.
+
+### Calculating $v_{\text{min}}$:
+$$
+\begin{alignedat}{2}
+f_{s,\text{min}} = & \text{ } \mu N \\
+\sum{F_{r}} = & -\frac{mv^2}{R} && = f_{s,\text{min}}\cos{\beta} - N\sin{\beta}  \\
+& -\frac{mv^2}{R} && = N(\mu \cos{\beta} - \sin{\beta}) \\
+& \text{ } v^2 && = \frac{NR}{m}(\sin{\beta} - \mu \cos{\beta}) \\
+
+\sum{F_{y}} = & \text{ } 0 && = N\cos{\beta} + f_{s,\text{min}}\sin{\beta} - mg \\
+            &  && = N\cos{\beta} + \mu N{\beta} - mg \\
+            & && = N(\cos{\beta} + \mu\sin{\beta}) - mg \\
+            & mg && = N(\cos{\beta} + \mu\sin{\beta}) \\
+
+\end{alignedat}
+$$
+
+Dividing the two equations, we get:
+
+$$
+\begin{aligned}
+\frac{v^2}{mg} &= \frac{R(\sin{\beta} - \mu \cos{\beta})}{m(\cos{\beta} + \mu\sin{\beta})} \\
+v^2 &= \frac{Rg(\sin{\beta} - \mu \cos{\beta})}{\cos{\beta} + \mu\sin{\beta}} \\
+
+v_{\text{min}} &= \sqrt{\frac{Rg(\sin{\beta} - \mu \cos{\beta})}{\cos{\beta} + \mu\sin{\beta}}}
+
+\end{aligned}
+$$
+
+### Calculating $v_{\text{max}}$:
+
+We just need to change the direction of the friction force, so we get:
+
+$$
+\begin{alignedat}{2}
+f_{s,\text{max}} = & \text{ } \mu N \\
+\sum{F_{r}} = & -\frac{mv^2}{R} && = -f_{s,\text{max}}\cos{\beta} - N\sin{\beta}  \\
+& \frac{mv^2}{R} && = N(\mu \cos{\beta} + \sin{\beta}) \\
+& \text{ } v^2 && = \frac{NR}{m}(\mu \cos{\beta} + \sin{\beta}) \\
+
+\sum{F_{y}} = & \text{ } 0 && = N\cos{\beta} - f_{s,\text{max}}\sin{\beta} - mg \\
+            &  && = N\cos{\beta} - \mu N{\beta} - mg \\
+            & && = N(\cos{\beta} - \mu\sin{\beta}) - mg \\
+            & mg && = N(\cos{\beta} - \mu\sin{\beta}) \\
+\end{alignedat}
+$$
+
+Dividing the two equations, we get:
+
+$$
+\begin{aligned}
+\frac{v^2}{mg} &= \frac{R(\mu \cos{\beta} + \sin{\beta} )}{m(\cos{\beta} - \mu\sin{\beta})} \\
+v^2 &= \frac{Rg(\mu \cos{\beta} + \sin{\beta})}{\cos{\beta} - \mu\sin{\beta}} \\
+
+v_{\text{max}} &= \sqrt{\frac{Rg(\mu \cos{\beta} + \sin{\beta})}{\cos{\beta} - \mu\sin{\beta}}}
+
+\end{aligned}
+$$
+
+## 3. Tetherball Breaking Off
+
+### (a) Find $\omega$
+We'll need Newton's equations to find $\omega$.
+
+$$
+\begin{alignedat}{2}
+\sum{F_{r}} = & -ml\sin{\beta}\omega^2 && = -T\sin{\beta} \\
+\sum{F_{y}} = & \text{ } 0 && = T\cos{\beta} - mg \\
+            & \text{ } mg && = T\cos{\beta} \\
+\end{alignedat}
+$$
+
+Dividing the two equations, we get:
+$$
+\begin{aligned}
+\frac{l\omega^2}{g} &= \frac{1}{\cos{\beta}} \\
+\omega^2 &= \frac{g}{l\cos{\beta}} \\
+\omega &= \sqrt{\frac{g}{l\cos{\beta}}}
+\end{aligned}
+$$
+
+### (b) Find $d$, the distance traveled after breaking off
+This is now just kinematics.
+
+First, the only horizontal velocity it has is its tangential velocity at the time of breaking off. The direction doesn't matter for our purposes, only the magnitude.
+
+Second, we know the only acceleration in the vertical direction is from gravity and from this we can figure out $t$, how long it takes the ball to hit the ground.
+
+Then, $d$ equals $v_{\text{tangential}}t$.
+
+$$
+\begin{aligned}
+v_{\text{tangential}} &= l\sin{\beta}\omega = l\sin{\beta}\sqrt{\frac{g}{l\cos{\beta}}} = \sin{\beta}\sqrt{\frac{gl}{\cos{\beta}}} \\
+a_{\text{vertical}}(t) &= g \\
+v_{\text{vertical}}(t) &= -gt \\
+z_{\text{vertical}}(t) &= h - \frac{1}{2}gt^2 \\
+\end{aligned}
+$$
+
+Setting the vertical height to zero and moving terms around, we get:
+$$
+\begin{aligned}
+\frac{1}{2}gt^2 &= h \\
+t &= \sqrt{\frac{2h}{g}} \\
+d &= v_{\text{tangential}}t  \\
+&= \sin{\beta}\sqrt{\frac{gl}{\cos{\beta}}} \sqrt{\frac{2h}{g}} \\
+&= \sin{\beta}\sqrt{\frac{2hl}{\cos{\beta}}}
+\end{aligned}
+$$
+
+
+## 4. Two Boxes Around a Shaft
+
+### (a) Find $T_B$
+$$
+\begin{alignedat}{2}
+\sum{F_{r}} = & -2m_2d\omega^2 && = T_B \\
+\end{alignedat}
+$$
+
+### (b) Find $T_A$
+$$
+\begin{alignedat}{2}
+\sum{F_{r}} = & -m_1d\omega^2 && = T_B - T_A \\
+              & \text{ } T_A && = T_B + m_1d\omega^2 \\
+              & \text{ } T_A && = 2m_2d\omega^2 + m_1d\omega^2 \\
+              & &&= d\omega^2(2m_2 + m_1) \\
+\end{alignedat}
+$$
+
+## 5. Satellite
+
+### (a) Which satellite has higher speed?
+$$
+\begin{alignedat}{2}
+\sum{F_{A,r}} = & -\frac{m_Av_A^2}{r_A} && = -\frac{Gm_Em_A}{r_A^2} \\
+              & \text{ } v_A^2 && = \frac{Gm_E}{r_A} \\
+\end{alignedat}
+$$
+
+By similar logic for $B$, $v_B^2 = \frac{Gm_E}{r_B}$.
+
+Clearly, since $r_A > r_B$, $v_A < v_B$. The farther a satellite is from the Earth, the slower it moves.
+
+### (b) Which satellite has a longer period $T$?
+
+The period is the time it takes for a satellite to make one revolution around earth, so $\omega T = 2\pi$. Remember radians are unit-less.
+
+$$
+\begin{aligned}
+\omega_A T_A &=  2 \pi \\
+T_A &= \frac{2\pi}{\omega_A} \\
+T_B &= \frac{2\pi}{\omega_B} \\
+\end{aligned}
+$$
+
+Now, we must compare angular velocities. From part (a), we can convert velocity to angular velocity for each satellite:
+
+$$
+\begin{aligned}
+v_A^2 &= \frac{Gm_E}{r_A} \\
+\omega_A^2 r_A^2 &= \frac{Gm_E}{r_A} \\
+\omega_A^2 &= \frac{Gm_E}{r_A^3} \\
+\omega_B^2 &= \frac{Gm_E}{r_B^3}
+\end{aligned}
+$$
+
+Since $r_A > r_B$, $\omega_A < \omega_B$, which implies $T_A > T_B$.
+
+## 6. A coin on a rotating disk
+
+<img src="/mit18.01sc-pset3-p6-forcediagram.png" className="mt-4"/>
+
+### (a) Force of static friction on the coin
+
+Newton's laws equations:
+$$
+\begin{alignedat}{2}
+f_{s} = & \text{ } \mu N \\
+\omega = & \text{ } \alpha t \\
+\sum{F_{r}} = & -md\omega^2 && = f_{s} \\
+
+\sum{F_{y}} = & \text{ } 0 && = N - mg \\
+            & N && = mg \\
+
+\end{alignedat}
+$$
+
+We get $f_s = -md\alpha^2 t^2$.
+
+### (b) Angular velocity at which coin starts to slip
+The maximum static friction force is limited by the coin's weight and the coefficient of static friction. We know $N = mg$, so the maximum static friction force is $\mu_s N = \mu_s mg$.
+
+Using our radial equation, we get:
+$$
+\begin{aligned}
+-md\omega^2 &= \mu_s mg \\
+\omega^2 &= \frac{\mu_s g}{d} \\
+\omega &= \sqrt{\frac{\mu_s g}{d}}
+\end{aligned}
+$$

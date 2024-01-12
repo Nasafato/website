@@ -11,11 +11,13 @@ export default async function Home() {
         <h2>Recently</h2>
         <ul className="mt-2 list-inside list-disc">
           <li>
-            <a
-              href="https://daodejing.app/en/verses/chinese"
-              className="underline"
-            >
-              Daodejing.app
+            <a href="https://magnet.run" className="underline">
+              magnet.run
+            </a>
+          </li>
+          <li>
+            <a href="https://toolkit.ai" className="underline">
+              toolkit.ai
             </a>
           </li>
           <li>
@@ -26,6 +28,14 @@ export default async function Home() {
           <li>
             <a href="https://twitter.com/revv_xyz" className="underline">
               Revv
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://daodejing.app/en/verses/chinese"
+              className="underline"
+            >
+              Daodejing.app
             </a>
           </li>
         </ul>

@@ -4,6 +4,16 @@
       "id": "pset1",
       "date": "2023-12-19",
       "title": "PSET 1"
+    },
+    {
+      "id": "pset2",
+      "date": "2023-12-21",
+      "title": "PSET 2"
+    },
+    {
+      "id": "pset3",
+      "date": "2023-12-29",
+      "title": "PSET 3"
     }
   ]
 }
