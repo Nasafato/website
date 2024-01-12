@@ -7,7 +7,7 @@ export async function Physics() {
 
   return (
     <div>
-      <h2 className="mb-2">Posts</h2>
+      <h2 className="mb-2">Physics 18.01 PSETs</h2>
       <ul className="list-inside list-disc">
         {posts.map((post) => {
           return (
