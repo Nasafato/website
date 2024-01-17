@@ -1,6 +1,6 @@
 "use client";
 import { usePathname } from "next/navigation";
-import { Link } from "@/app/[locale]/LocaleNav";
+import { Link } from "@/components/LocaleNav";
 
 export function Logo() {
   const pathname = usePathname();

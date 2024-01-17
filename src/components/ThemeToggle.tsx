@@ -1,7 +1,7 @@
 "use client";
 import { useState, useCallback, useEffect } from "react";
-import { themeEffect } from "@/app/ThemeEffect";
-import { useTranslations } from "@/app/[locale]/IntlProvider";
+import { themeEffect } from "@/components/ThemeEffect";
+import { useTranslations } from "@/components/IntlProvider";
 
 export function ThemeToggle() {
   // a `null` preference implies auto

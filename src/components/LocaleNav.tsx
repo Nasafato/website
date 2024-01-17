@@ -1,6 +1,6 @@
 "use client";
 
-import { useLocale } from "@/app/[locale]/IntlProvider";
+import { useLocale } from "@/components/IntlProvider";
 import NextLink from "next/link";
 import type { LinkProps as NextLinkProps } from "next/link";
 type LinkProps = Omit<

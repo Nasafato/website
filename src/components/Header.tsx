@@ -1,4 +1,4 @@
-import { ThemeToggle } from "@/app/ThemeToggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Logo } from "@/app/[locale]/logo";
 
 export function Header() {

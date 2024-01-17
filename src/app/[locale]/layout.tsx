@@ -1,6 +1,6 @@
-import { Container } from "@/app/[locale]/Container";
-import { Header } from "@/app/[locale]/Header";
-import { IntlProvider } from "@/app/[locale]/IntlProvider";
+import { Container } from "@/components/Container";
+import { Header } from "@/components/Header";
+import { IntlProvider } from "@/components/IntlProvider";
 import { Locale, i18n } from "@/i18n-config";
 
 export default async function LocaleLayout({

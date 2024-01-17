@@ -1,12 +1,12 @@
-import { Link } from "@/app/[locale]/LocaleNav";
+import { Link } from "@/components/LocaleNav";
 
 export async function Posts() {
   const posts = (await import(`@/app/[locale]/posts.json`)).default.posts;
 
   return (
     <div>
-      <h2 className="mb-2">Posts</h2>
-      <ul className="list-inside list-disc">
+      <h2 className="font-semibold">Writing</h2>
+      <ul className="list-inside list-disc mt-2">
         {posts.map((post) => {
           return (
             <li key={post.id} className="underline">
