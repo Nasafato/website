@@ -5,7 +5,6 @@ export async function Posts() {
 
   return (
     <div>
-      <h2 className="font-semibold">Writing</h2>
       <ul className="list-inside list-disc mt-2">
         {posts.map((post) => {
           return (

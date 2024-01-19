@@ -44,6 +44,9 @@ dependencies:
   jsxgraph:
     specifier: ^1.6.2
     version: 1.6.2
+  lucide-react:
+    specifier: ^0.312.0
+    version: 0.312.0(react@18.2.0)
   negotiator:
     specifier: ^0.6.3
     version: 0.6.3
@@ -2446,6 +2449,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+    dev: false
+
+  /lucide-react@0.312.0(react@18.2.0):
+    resolution: {integrity: sha512-3UZsqyswRXjW4t+nw+InICewSimjPKHuSxiFYqTshv9xkK3tPPntXk/lvXc9pKlXIxm3v9WKyoxcrB6YHhP+dg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
     dev: false
 
   /markdown-extensions@2.0.0:

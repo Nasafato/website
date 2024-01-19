@@ -45,3 +45,13 @@
           theme-system:dark:[&_.moon-icon]:hidden
           theme-system:[&_.sun-icon]:hidden
           theme-system:[&._moon-icon]:hidden */
+
+.print-only {
+  display: none;
+}
+
+@media print {
+  .print-only {
+    display: block;
+  }
+}

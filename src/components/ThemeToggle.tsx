@@ -46,7 +46,7 @@ export function ThemeToggle() {
   const t = useTranslations();
 
   return (
-    <div className="group flex items-center gap-x-1 font-mono">
+    <div className="group flex items-center gap-x-1 font-mono relative">
       <span
         className={`
             text-[9px]
@@ -54,6 +54,8 @@ export function ThemeToggle() {
 
             /* mobile */
             hidden
+            absolute
+            left-10
 
             md:group-hover:inline
           `}
