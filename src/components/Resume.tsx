@@ -5,44 +5,46 @@ import { LinkPill } from "@/components/ui/LinkPill";
 export function Resume() {
   return (
     <div>
-      <header className="print-only">
-        <h2>Alan Gou</h2>
+      <header className="hidden print:block print:mb-2">
+        <h2 className="flex">
+          <span className="font-bold">Alan Gou</span>{" "}
+          <span className="mx-2">/</span> work
+        </h2>
       </header>
       <main>
-        <section className="mb-6">
-          <p className="text-2xl font-semibold max-w-xs">
+        <section className="mb-3 print:mb-2">
+          <p className="text-2xl font-semibold max-w-sm font-serif">
             Engineer, writer, and twice a VC-backed founder.
           </p>
         </section>
-        <section className="sm:pl-12 sm:pr-16 mb-4">
+        <section className="sm:pl-12 sm:pr-16 mb-2 print:text-sm print:mb-2">
           <p>
-            I am currently on sabbatical, taking{" "}
+            Currently on sabbatical, taking{" "}
             <Link href="/physics/18.01sc/pset1">physics</Link> classes back at
-            Columbia, skiing, and looking into healthcare and longevity.
+            Columbia,
           </p>
         </section>
-        <section className="sm:pl-12 sm:pr-16 space-y-4">
+        <section className="sm:pl-12 sm:pr-16 space-y-2 print:text-sm print:space-y-2">
           <p>
-            Before that, I cofounded Revv, where we raised $5.5 million to build
-            a crypto options trading exchange, and in college, I cofounded
-            Palette, where we built an experimentation management platform.
+            Previously cofounded Revv, raising $5.5 million to build a crypto
+            options exchange, and in college cofounded Palette, an
+            experimentation platform.
           </p>
           <p>
-            I started my career in SF, where my goal was to learn how to build a
-            startup from the ground up, hence, I spanned many roles and touched
-            all parts of the business.
+            Began my career in SF, where I immersed myself in startups and
+            learned how growth, sales, and product teams work.
           </p>
         </section>
-        <section className="mt-8">
-          <h3 className="text-xl font-bold underline-offset-4 mb-2">
+        <section className="mt-8 print:mt-3">
+          <h3 className="text-xl font-bold underline-offset-4 mb-2 print:mb-1 font-serif">
             Experiences
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-4 print:space-y-2">
             {Experiences.map((experience) => {
               return (
                 <div key={experience.company}>
-                  <div className="flex justify-between w-full">
-                    <div className="flex gap-x-1 text-lg font-medium">
+                  <div className="flex justify-between w-full items-center">
+                    <div className="flex gap-x-1 text-base">
                       <h4>
                         <LinkPill href={experience.companyLink}>
                           {experience.company}
@@ -69,18 +71,18 @@ export function Resume() {
                       })}
                     </p>
                   </div>
-                  {experience.content}
+                  <div className="print:text-sm">{experience.content}</div>
                 </div>
               );
             })}
           </div>
         </section>
-        <section className="mt-8">
-          <h2 className="text-xl font-bold underline-offset-4 mb-2">
+        <section className="mt-8 print:mt-4">
+          <h2 className="text-xl font-bold underline-offset-4 mb-2 print:mb-1 font-serif">
             Education
           </h2>
           <div className="flex items-center justify-between">
-            <p className="text-lg">Columbia University — 2017</p>
+            <p className="">Columbia University — 2017</p>
           </div>
           <Subheading>B.S. in Computer Science</Subheading>
         </section>
@@ -91,7 +93,7 @@ export function Resume() {
 
 function List(props: { children: React.ReactNode }) {
   return (
-    <ul className="space-y-0 list-disc list-inside text-[15px]">
+    <ul className="space-y-1 list-disc list-inside text-[15px] print:text-sm">
       {props.children}
     </ul>
   );
@@ -110,7 +112,7 @@ function ListItem(props: { children: React.ReactNode }) {
 
 function Subheading(props: { children: React.ReactNode }) {
   return (
-    <p className="mb-2 text-[15px] italic text-gray-800 dark:text-gray-100/80">
+    <p className="mb-2 text-[15px] print:text-sm italic text-gray-800 dark:text-gray-100/80">
       {props.children}
     </p>
   );
@@ -134,29 +136,32 @@ const Experiences = [
     content: (
       <div>
         <Subheading>
-          I wore a lot of hats. Engineering-wise, I was responsible for the
-          web/mobile part of our stack. I also was in charge of our regulatory
-          and compliance strategy.
+          Responsible for web/mobile part of our stack and our regulatory and
+          compliance strategy.
         </Subheading>
         <List>
           <ListItem>
-            Bulk of our engineering work was devoted to Strike, a non-custodial
-            RFQ-based options exchange on Solana
+            We built{" "}
+            <LinkPill href="https://www.strike.trade/">Strike</LinkPill>, a
+            non-custodial RFQ-based options exchange on Solana. Docs still{" "}
+            <LinkPill href="https://docs.strike.trade/docs/introduction">
+              here
+            </LinkPill>
+            .
           </ListItem>
           <ListItem>
-            Created internal tooling to manage our Rust/TypeScript monorepo.
+            Built the web app real-time RFQ flow, trade volume metrics, and
+            market maker portal, and created internal tooling to manage our
+            Rust/TypeScript monorepo.
           </ListItem>
+
           <ListItem>
-            Built the web app real-time RFQ flow, aggregate trade volume
-            metrics, and market maker portal
-          </ListItem>
-          <ListItem>Built Revv and Strike{"'"}s landing pages</ListItem>
-          <ListItem>
-            Created regulatory strategy for Strike in collaboration with
-            third-party counsel
-          </ListItem>
-          <ListItem>
-            Cowrote our content pieces on the options industry
+            Built Revv and Strike{"'"}s landing and blog pages. Cowrote our
+            content pieces on the options industry, the{" "}
+            <LinkPill href="https://web.archive.org/web/20221202025956/https://revv.xyz/ideas/defi-options-mapping-hype-to-reality">
+              second
+            </LinkPill>{" "}
+            of which generated over a hundred thousand views on Twitter.
           </ListItem>
         </List>
       </div>
@@ -180,22 +185,14 @@ const Experiences = [
       <div>
         <Subheading>
           Platform team, which handled infra, external platform, and customer
-          integrations.
+          integrations
         </Subheading>
         <List>
           <ListItem>
-            Helped build our customer-facing API platform in REST and GraphQL,
-            giving our largest and most sophisticated customers the ability to
-            build custom integrations with us
-          </ListItem>
-          <ListItem>
-            Led ComputerEase ERP integration, the ERP system used by over 40% of
-            our Kojo{"'"}s customers at the time
-          </ListItem>
-          <ListItem>
-            Built out async job service, helped upgrade our database layer which
-            touched every part of our codebase, and also revamped our user auth
-            system across backend, mobile app, and web app
+            Helped build our customer-facing API platform in REST and GraphQL.
+            Designed and built ComputerEase ERP integration, reducing
+            procurement entry times between 50-80%. Built out async job service,
+            revamped user auth across mobile and web
           </ListItem>
         </List>
       </div>
@@ -203,7 +200,7 @@ const Experiences = [
   },
   {
     company: "Front",
-    companyLink: "https://frontapp.com",
+    companyLink: "https://front.com",
     position: "Growth Engineer",
     dates: [
       {
@@ -218,22 +215,15 @@ const Experiences = [
     content: (
       <div>
         <Subheading>
-          On growth team, learning how a fast-growing startup acquires users at
+          Growth team, learning how a fast-growing startup acquires users at
           scale
         </Subheading>
         <List>
           <ListItem>
-            Increased top-of-funnel conversion by double digits by improving
-            trial experience and sign-up flow
-          </ListItem>
-          <ListItem>
-            Reduced time-to-first-demo by over 30% for our sales team by adding
-            in-app demo features, improving the Salesforce integration, and
-            revamping the teammate invite flow
-          </ListItem>
-          <ListItem>
-            Built out distributed jobs for our Zendesk and other competitor
-            migration tools, helping us net even more customers
+            Focused on improving conversion at every part of the sales funnel,
+            from landing page to sign-up to demo to paid. Worked on trial
+            experience, onboarding, in-app demoing, sign-up flow, import and
+            sync tools, and more.
           </ListItem>
         </List>
       </div>
@@ -255,17 +245,12 @@ const Experiences = [
     ],
     content: (
       <div>
-        <Subheading>
-          On the merchant team, our B2B and integrations arm
-        </Subheading>
+        <Subheading>Merchant team, our B2B and integrations arm</Subheading>
         <List>
           <ListItem>
             Built credit waterfall exchange, which served over 20% of Affirm
-            {"'"}s underwriting flows.
-          </ListItem>
-          <ListItem>
-            Worked on core checkout, used by millions of Affirm{"'"}s online
-            customers
+            {"'"}s underwriting flows, and worked on core checkout and
+            experiments platform.
           </ListItem>
         </List>
       </div>

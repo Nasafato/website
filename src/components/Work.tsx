@@ -1,6 +1,4 @@
 import { Resume } from "@/components/Resume";
-import { Footnote } from "@/components/ui/Footnote";
-import { LinkPill } from "@/components/ui/LinkPill";
 
 export function Work() {
   return (

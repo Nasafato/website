@@ -22,7 +22,7 @@ export function Header() {
   });
 
   return (
-    <header className="flex mb-8 justify-between items-center">
+    <header className="flex mb-8 justify-between items-center print:hidden">
       <span className="text-md md:text-lg whitespace-nowrap font-semibold flex items-center">
         <Link
           href="/"
