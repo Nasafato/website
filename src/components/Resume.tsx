@@ -1,6 +1,7 @@
 import { Dot } from "lucide-react";
 import { Link } from "@/components/LocaleNav";
 import { LinkPill } from "@/components/ui/LinkPill";
+import { Fragment } from "react";
 
 export function Resume() {
   return (
@@ -60,13 +61,13 @@ export function Resume() {
                         }
 
                         return (
-                          <>
+                          <Fragment key={index}>
                             <span
                               className="text-sm"
                               key={index}
                             >{`${date.month} ${date.year}`}</span>
                             {space}
-                          </>
+                          </Fragment>
                         );
                       })}
                     </p>

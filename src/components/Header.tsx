@@ -22,38 +22,41 @@ export function Header() {
   });
 
   return (
-    <header className="flex mb-8 justify-between items-center print:hidden">
-      <span className="text-md md:text-lg whitespace-nowrap font-semibold flex items-center">
+    <header className="flex mb-8 justify-between items-start sm:items-center print:hidden">
+      <div className="text-md md:text-lg whitespace-nowrap font-semibold sm:flex items-center">
         <Link
           href="/"
-          className="hover:bg-gray-200 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -ml-2 transition-[background-color]"
+          className="block hover:bg-gray-200 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -ml-2 transition-[background-color]"
         >
           Alan Gou
         </Link>
         {matchingNavLink ? (
-          <div>
-            <span className="text-sm font-normal ml-1 mr-3">/</span>
-            <span className="font-normal">{matchingNavLink.label}</span>
+          <div className="flex items-center">
+            <span className="hidden sm:block text-sm font-normal ml-1 mr-3">
+              /
+            </span>
+            <span className="font-normal text-lg capitalize -mt-2 sm:mt-0">
+              {matchingNavLink.label}
+            </span>
           </div>
         ) : null}
-      </span>
+      </div>
 
-      <div className="flex justify-between items-center gap-x-4">
+      <div className="flex flex-col sm:flex-row justify-between gap-x-4">
         <nav>
-          <ul className="flex justify-between gap-x-4">
+          <ul className="sm:flex justify-between gap-x-4">
             {NavLinks.map((link) => {
               let active = false;
               if (pathname.includes(link.href)) {
                 active = true;
               }
-              console.log(pathname);
               return (
                 <li key={link.label}>
                   <Link
                     href={link.href}
                     className={`${
                       active && "underline"
-                    } underline-offset-4 hover:text-gray-400 hover:underline`}
+                    } block p-1 underline-offset-4 hover:text-gray-400 hover:underline`}
                   >
                     {link.label}
                   </Link>
