@@ -22,7 +22,11 @@ export function Resume() {
           <p>
             Currently on sabbatical, taking{" "}
             <Link href="/physics/18.01sc/pset1">physics</Link> classes back at
-            Columbia,
+            Columbia, skiing, and working as a technical advisor helping build
+            and design systems for projects like{" "}
+            <LinkPill href="https://magnet.run">magnet.run</LinkPill>,{" "}
+            <LinkPill href="https://toolkit.ai">toolkit.ai</LinkPill>, and{" "}
+            <LinkPill href="https://trycoaster.com">Coaster</LinkPill>.
           </p>
         </section>
         <section className="sm:pl-12 sm:pr-16 space-y-2 print:text-sm print:space-y-2">
@@ -190,10 +194,11 @@ const Experiences = [
         </Subheading>
         <List>
           <ListItem>
-            Helped build our customer-facing API platform in REST and GraphQL.
-            Designed and built ComputerEase ERP integration, reducing
-            procurement entry times between 50-80%. Built out async job service,
-            revamped user auth across mobile and web
+            Helped build our customer-facing API platform in NodeJS, exposing
+            our data through GraphQL and REST endpoints. Designed and built
+            ComputerEase ERP integration, reducing procurement entry times
+            between 50-80%. Built out async job service, revamped user auth
+            across mobile and web
           </ListItem>
         </List>
       </div>
