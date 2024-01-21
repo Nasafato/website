@@ -42,7 +42,7 @@ export function Header() {
         ) : null}
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-between gap-x-4">
+      <div className="flex flex-col sm:flex-row justify-between gap-x-4 gap-y-2">
         <nav>
           <ul className="sm:flex justify-between gap-x-4">
             {NavLinks.map((link) => {
