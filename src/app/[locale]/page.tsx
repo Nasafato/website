@@ -29,8 +29,21 @@ export default async function Home() {
         .
       </p>
       <p>
-        You can see my work history <Link href="/work">here</Link>, or my
-        learning journey <Link href="/learning">here</Link>.
+        You can see my work history{" "}
+        <Link
+          href="/work"
+          className="underline underline-offset-1 hover:text-gray-400"
+        >
+          here
+        </Link>
+        , or my learning journey{" "}
+        <Link
+          href="/learning"
+          className="underline underline-offset-1 hover:text-gray-400"
+        >
+          here
+        </Link>
+        .
       </p>
     </main>
   );
