@@ -13,15 +13,6 @@ export async function Physics() {
         </LinkPill>{" "}
         PSETs into an online format.
       </p>
-      <ul className="list-inside list-disc mt-2">
-        {posts.map((post) => {
-          return (
-            <li key={post.id} className="underline">
-              <Link href={`/physics/8.01sc/${post.id}`}>{post.title}</Link>
-            </li>
-          );
-        })}
-      </ul>
     </div>
   );
 }
