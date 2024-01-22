@@ -6,7 +6,7 @@ export function LinkPill(props: {
   return (
     <a
       href={props.href}
-      className={`self-start underline ${props.className} flex-shrink-0`}
+      className={`self-start underline underline-offset-2 ${props.className} flex-shrink-0`}
     >
       {props.children}
     </a>

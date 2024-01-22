@@ -2,10 +2,6 @@ import { Link } from "@/components/LocaleNav";
 import { LinkPill } from "@/components/ui/LinkPill";
 
 export async function Physics() {
-  const posts = (await import(`@/app/[locale]/physics.json`)).default[
-    "18.01sc"
-  ];
-
   return (
     <div>
       <h2 className="font-semibold">Physics</h2>
@@ -21,7 +17,7 @@ export async function Physics() {
         {posts.map((post) => {
           return (
             <li key={post.id} className="underline">
-              <Link href={`/physics/18.01sc/${post.id}`}>{post.title}</Link>
+              <Link href={`/physics/8.01sc/${post.id}`}>{post.title}</Link>
             </li>
           );
         })}

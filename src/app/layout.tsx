@@ -30,7 +30,9 @@ export default function RootLayout({
           }}
         ></script>
       </head>
-      <body className={`${inter.className} dark:bg-gray-950 dark:text-gray-50`}>
+      <body
+        className={`${inter.className} text-gray-900/90 dark:bg-gray-950 dark:text-gray-100`}
+      >
         {children}
       </body>
     </html>

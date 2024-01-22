@@ -1,19 +1,19 @@
 {
-  "18.01sc": [
+  "8.01sc": [
     {
       "id": "pset1",
       "date": "2023-12-19",
-      "title": "PSET 1"
+      "title": "PSET 1: Kinematics"
     },
     {
       "id": "pset2",
       "date": "2023-12-21",
-      "title": "PSET 2"
+      "title": "PSET 2: Newton's Laws"
     },
     {
       "id": "pset3",
       "date": "2023-12-29",
-      "title": "PSET 3"
+      "title": "PSET 3: Circular Motion"
     }
   ]
 }

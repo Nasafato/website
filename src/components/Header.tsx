@@ -8,9 +8,13 @@ const NavLinks = [
     label: "work",
     href: "work",
   },
+  // {
+  //   label: "writing",
+  //   href: "writing",
+  // },
   {
-    label: "writing",
-    href: "writing",
+    label: "learning",
+    href: "learning",
   },
 ];
 

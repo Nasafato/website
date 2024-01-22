@@ -21,7 +21,7 @@ export function Resume() {
         <section className="sm:pl-12 sm:pr-16 mb-2 print:text-sm print:mb-2">
           <p>
             Currently on sabbatical, taking{" "}
-            <Link href="/physics/18.01sc/pset1">physics</Link> classes back at
+            <Link href="/physics/8.01sc/pset1">physics</Link> classes back at
             Columbia, skiing, and working as a technical advisor helping build
             and design systems for projects like{" "}
             <LinkPill href="https://magnet.run">magnet.run</LinkPill>,{" "}
