@@ -45,6 +45,11 @@ export default async function Home() {
         </Link>
         .
       </p>
+      <p>
+        I made a site to read and memorize the Daodejing{" "}
+        <LinkPill href="https://daodejing.app/en/verses/chinese">here</LinkPill>
+        .
+      </p>
     </main>
   );
 }

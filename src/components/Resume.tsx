@@ -5,12 +5,15 @@ import { Fragment } from "react";
 
 export function Resume() {
   return (
-    <div>
-      <header className="hidden print:block print:mb-2">
+    <div className="print:text-gray-900">
+      <header className="hidden print:mb-2 print:flex justify-between items-center">
         <h2 className="flex">
           <span className="font-bold">Alan Gou</span>{" "}
           <span className="mx-2">/</span> work
         </h2>
+        <LinkPill href="https://alangou.com" className="font-serif text-[90%]">
+          alangou.com
+        </LinkPill>
       </header>
       <main>
         <section className="mb-3 print:mb-2">
@@ -117,7 +120,7 @@ function ListItem(props: { children: React.ReactNode }) {
 
 function Subheading(props: { children: React.ReactNode }) {
   return (
-    <p className="mb-2 text-[15px] print:text-sm italic text-gray-800 dark:text-gray-100/80">
+    <p className="mb-2 text-[15px] print:text-sm italic text-gray-800 dark:text-gray-100/80 print:dark:text-gray-200 print:text-gray-900">
       {props.children}
     </p>
   );
