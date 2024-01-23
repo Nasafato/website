@@ -17,10 +17,9 @@ export default async function Home() {
       </p>
       <p>
         I last founded a startup called{" "}
-        <LinkPill href="https://revv.xyz">Revv</LinkPill>
-        <Footnote content="The team has since pivoted.">[1]</Footnote>. We dug
-        deep into the crypto options trading landscape and built a non-custodial
-        derivatives exchange on Solana called{" "}
+        <LinkPill href="https://revv.xyz">Revv</LinkPill>. We dug deep into the
+        crypto options trading landscape and built a non-custodial derivatives
+        exchange on Solana called{" "}
         <LinkPill href="https://www.strike.trade/">Strike</LinkPill>, to solve
         the problems outlined{" "}
         <LinkPill href="https://web.archive.org/web/20230402061306/https://revv.xyz/writing/showcasing-strike">
