@@ -1,14 +1,11 @@
 import { themeEffect } from "@/components/ThemeEffect";
-import "./globals.css";
 import type { Metadata } from "next";
-import { IBM_Plex_Serif, Noto_Serif } from "next/font/google";
+import { Source_Serif_4 } from "next/font/google";
+import "./globals.css";
 
-// const inter = Inter({ subsets: ["latin"] });
-const ibmPlexSerif = IBM_Plex_Serif({
+const sourceSerif = Source_Serif_4({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
-const notoSerif = Noto_Serif({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Alan Gou",
@@ -37,8 +34,9 @@ export default function RootLayout({
       </head>
       <body
         className={`
-        ${ibmPlexSerif.className}
+        ${true && sourceSerif.className}
         text-gray-900/90 dark:bg-gray-950 dark:text-gray-100 text-lg
+        bg-zinc-100
         `}
       >
         {children}
