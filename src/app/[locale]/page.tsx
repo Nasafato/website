@@ -4,7 +4,7 @@ import { LinkPill } from "@/components/ui/LinkPill";
 
 export default async function Home() {
   return (
-    <main className="space-y-4 text-[105%]">
+    <main className="space-y-4">
       <p>
         I grew up on Legos, Star Wars, and Harry Potter, and any other books I
         could get my hands on. My two favorites are{" "}

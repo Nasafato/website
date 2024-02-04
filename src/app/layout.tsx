@@ -1,9 +1,14 @@
 import { themeEffect } from "@/components/ThemeEffect";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { IBM_Plex_Serif, Noto_Serif } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
+const ibmPlexSerif = IBM_Plex_Serif({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
+const notoSerif = Noto_Serif({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Alan Gou",
@@ -31,7 +36,10 @@ export default function RootLayout({
         ></script>
       </head>
       <body
-        className={`${inter.className} text-gray-900/90 dark:bg-gray-950 dark:text-gray-100`}
+        className={`
+        ${ibmPlexSerif.className}
+        text-gray-900/90 dark:bg-gray-950 dark:text-gray-100 text-lg
+        `}
       >
         {children}
       </body>

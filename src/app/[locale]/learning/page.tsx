@@ -6,8 +6,8 @@ export default async function LearningPage() {
   const posts = (await import(`@/app/[locale]/physics.json`)).default["8.01sc"];
 
   return (
-    <div className="text-[105%]">
-      <h2 className="font-serif font-bold text-2xl mb-1">Learning</h2>
+    <div className="">
+      <h2 className="font-bold text-2xl mb-1">Learning</h2>
       <div className="sm:pl-12 max-w-lg space-y-3 mb-3">
         <p>
           I{"'"}m a proud alum of{" "}
@@ -22,7 +22,7 @@ export default async function LearningPage() {
       </div>
       <div className="">
         <section className="mt-8">
-          <h3 className="font-serif text-xl font-semibold">
+          <h3 className="text-xl font-semibold mb-2">
             Columbia PHYS UN3003: Mechanics
           </h3>
           <p>
@@ -32,7 +32,7 @@ export default async function LearningPage() {
           </p>
         </section>
         <section className="mt-8">
-          <h3 className="font-serif text-xl font-semibold">
+          <h3 className="text-xl font-semibold mb-2">
             Columbia PHYS UN1602: Thermo, Elec, and Mag
           </h3>
           <p>
@@ -41,7 +41,7 @@ export default async function LearningPage() {
           </p>
         </section>
         <section className="mt-8">
-          <h3 className="font-serif text-xl font-semibold">
+          <h3 className="text-xl font-semibold mb-2">
             MIT 8.01SC: Classical Mechanics
           </h3>
           <p className="mb-3">

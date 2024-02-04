@@ -11,13 +11,13 @@ export function Resume() {
           <span className="font-bold">Alan Gou</span>{" "}
           <span className="mx-2">/</span> work
         </h2>
-        <LinkPill href="https://alangou.com" className="font-serif text-[90%]">
+        <LinkPill href="https://alangou.com" className="text-[90%]">
           alangou.com
         </LinkPill>
       </header>
       <main>
         <section className="mb-3 print:mb-2">
-          <p className="text-2xl font-semibold max-w-sm font-serif">
+          <p className="text-2xl font-semibold max-w-sm">
             Engineer, writer, and twice a VC-backed founder.
           </p>
         </section>
@@ -44,7 +44,7 @@ export function Resume() {
           </p>
         </section>
         <section className="mt-8 print:mt-3">
-          <h3 className="text-xl font-bold underline-offset-4 mb-2 print:mb-1 font-serif">
+          <h3 className="text-xl font-bold underline-offset-4 mb-2 print:mb-1">
             Experiences
           </h3>
           <div className="space-y-4 print:space-y-2">
@@ -52,7 +52,7 @@ export function Resume() {
               return (
                 <div key={experience.company}>
                   <div className="flex justify-between w-full items-center">
-                    <div className="flex gap-x-1 text-base">
+                    <div className="flex gap-x-1 text-xl">
                       <h4>
                         <LinkPill href={experience.companyLink}>
                           {experience.company}
@@ -86,7 +86,7 @@ export function Resume() {
           </div>
         </section>
         <section className="mt-8 print:mt-4">
-          <h2 className="text-xl font-bold underline-offset-4 mb-2 print:mb-1 font-serif">
+          <h2 className="text-xl font-bold underline-offset-4 mb-2 print:mb-1">
             Education
           </h2>
           <div className="flex items-center justify-between">
@@ -101,7 +101,7 @@ export function Resume() {
 
 function List(props: { children: React.ReactNode }) {
   return (
-    <ul className="space-y-1 list-disc list-inside text-[15px] print:text-sm">
+    <ul className="space-y-1 list-disc list-inside print:text-sm">
       {props.children}
     </ul>
   );
@@ -120,7 +120,7 @@ function ListItem(props: { children: React.ReactNode }) {
 
 function Subheading(props: { children: React.ReactNode }) {
   return (
-    <p className="mb-2 text-[15px] print:text-sm italic text-gray-800 dark:text-gray-100/80 print:dark:text-gray-200 print:text-gray-900">
+    <p className="mb-2 text-lg print:text-sm italic text-gray-800 dark:text-gray-100/80 print:dark:text-gray-200 print:text-gray-900">
       {props.children}
     </p>
   );
