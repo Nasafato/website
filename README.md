@@ -1,1 +1,1 @@
-We are using NextJS.
+We are using NextJS. It is good enough for now.
